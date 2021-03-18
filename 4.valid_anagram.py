@@ -17,9 +17,7 @@ class Solution_1:
     def isAnagram(s, t):
         if len(s) != len(t):
             return False
-        s = sorted(s)
-        t = sorted(t)
-        return s == t
+        return sorted(s) == sorted(t)
 
 
 # Solution 2 -- Hashing(Python dictionary) -- Time complexity : O(n) -- Space complexity : O(n)
