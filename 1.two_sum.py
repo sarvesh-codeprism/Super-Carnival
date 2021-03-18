@@ -21,7 +21,7 @@
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
 
-# Solution 1 -- Time complexity : O(n^2) -- Space complexity : O(1)
+# Solution 1 -- Brute Force -- Time complexity : O(n^2) -- Space complexity : O(1)
 class Solution_1:
     def twoSum(nums, target):
         sol = []
@@ -31,7 +31,7 @@ class Solution_1:
                     sol += [i, j]
         return sol
     
-# Solution 2 -- Time complexity : O(n) -- Space complexity : O(n)
+# Solution 2 -- Hashing -- Time complexity : O(n) -- Space complexity : O(n)
 class Solution_2:
     def twoSum(nums, target):
         sums = {}

@@ -17,7 +17,7 @@
 #        Output: 0
 #        Explanation: In this case, no transactions are done and the max profit = 0.
 
-# Solution 1 -- Time complexity : O(n^2) -- Space complexity : O(1)
+# Solution 1 -- Brute Force -- Time complexity : O(n^2) -- Space complexity : O(1)
 class Solution_1:
     def maxProfit(prices):
         max_profit = 0
@@ -28,7 +28,7 @@ class Solution_1:
                     max_profit = profit
         return max_profit
 
-# Solution 2 -- Time complexity : O(n) -- Space complexity : O(1)
+# Solution 2 -- One Pass -- Time complexity : O(n) -- Space complexity : O(1)
 class Solution_2:
     def maxProfit(prices):
         max_profit = 0
