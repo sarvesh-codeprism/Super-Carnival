@@ -30,7 +30,7 @@ class Solution_1:
                 if nums[i] + nums[j] == target:
                     sol += [i, j]
         return sol
-    
+
 # Solution 2 -- Hashing -- Time complexity : O(n) -- Space complexity : O(n)
 class Solution_2:
     def twoSum(nums, target):
