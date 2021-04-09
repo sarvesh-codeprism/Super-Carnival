@@ -27,3 +27,25 @@ class Solution_1:
                 if s[ind:ind1 + 1] == (s[ind:ind1 + 1])[::-1]:
                     count += 1
         return count
+
+
+# Solution 2 -- Time complexity : O(n^2) -- Space complexity : O(1)
+class Solution_2:
+    def countSubstrings(self, s):
+        count = 0
+
+        for i in range(len(s)):
+            odd = self.isPalindrome(i, i, s)
+            even = self.isPalindrome(i, i+1, s)
+
+            count += odd + even
+
+        return count
+
+    def isPalindrome(self, le, r, s):
+        count = 0
+        while le >= 0 and r < len(s) and s[le] == s[r]:
+            le -= 1
+            r += 1
+            count += 1
+        return count
