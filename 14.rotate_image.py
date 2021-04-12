@@ -1,8 +1,9 @@
-# You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+# You are given an n x n 2D matrix representing an image, rotate the image by
+# 90 degrees (clockwise).
 
-# You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
-
- 
+# You have to rotate the image in-place, which means you have to modify the
+# input 2D matrix directly. DO NOT allocate another 2D matrix and do the
+# rotation.
 
 # Example 1:
 # Image --> https://assets.leetcode.com/uploads/2020/08/28/mat1.jpg
@@ -22,16 +23,17 @@
 # Input: matrix = [[1,2],[3,4]]
 # Output: [[3,1],[4,2]]
 
-# Solution 1 -- Reverse and Transpose -- Time complexity : O(n) - n is no. of cells in matrix --
-                                       # Space complexity : O(1)
+# Solution 1 -- Reverse and Transpose -- Time complexity : O(n) - n is no.
+# of cells in matrix --
+# Space complexity : O(1)
 class Solution_1:
     def rotate(self, m):
         n = len(m)
-        
+
         for i in range(n):
             for j in range(n//2):
                 m[j][i], m[n-1-j][i] = m[n-1-j][i], m[j][i]
-                
+
         for i in range(n):
             for j in range(i+1, n):
-                m[i][j],m[j][i] = m[j][i],m[i][j]
+                m[i][j], m[j][i] = m[j][i], m[i][j]

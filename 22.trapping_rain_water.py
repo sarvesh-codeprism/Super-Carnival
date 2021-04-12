@@ -33,4 +33,5 @@ class Solution_1:
                 max_r = height[len(height) - ind - 1]
             right[len(height) - ind - 1] = max_r
 
-        return sum([min(left[i], right[i])-height[i] for i in range(len(height))])
+        return sum([min(left[i],
+                        right[i])-height[i] for i in range(len(height))])

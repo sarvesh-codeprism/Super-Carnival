@@ -1,6 +1,8 @@
-# Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+# Given an array of integers nums and an integer target, return indices of the
+# two numbers such that they add up to target.
 
-# You may assume that each input would have exactly 'one solution', and you may not use the same element twice.
+# You may assume that each input would have exactly 'one solution', and you
+# may not use the same element twice.
 
 # You can return the answer in any order.
 
@@ -21,7 +23,7 @@
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
 
-# Solution 1 -- Brute Force -- Time complexity : O(n^2) -- Space complexity : O(1)
+# Solution 1 -- Brute Force -- Time complexity:O(n^2) -- Space complexity:O(1)
 class Solution_1:
     def twoSum(nums, target):
         sol = []
@@ -30,6 +32,7 @@ class Solution_1:
                 if nums[i] + nums[j] == target:
                     sol += [i, j]
         return sol
+
 
 # Solution 2 -- Hashing -- Time complexity : O(n) -- Space complexity : O(n)
 class Solution_2:

@@ -1,9 +1,7 @@
-# Given two strings s and t, return true if t is an anagram of s, and false otherwise.
-
- 
+# Given two strings s and t, return true if t is an anagram of s, and false
+# otherwise.
 
 # Example 1:
-
 #   Input: s = "anagram", t = "nagaram"
 #   Output: true
 
@@ -12,7 +10,7 @@
 #   Input: s = "rat", t = "car"
 #   Output: false
 
-# Solution 1 -- Sorting -- Time complexity : O(nlogn) -- Space complexity : O(1)
+# Solution 1 - Sorting - Time complexity : O(nlogn) -- Space complexity : O(1)
 class Solution_1:
     def isAnagram(s, t):
         if len(s) != len(t):
@@ -20,7 +18,8 @@ class Solution_1:
         return sorted(s) == sorted(t)
 
 
-# Solution 2 -- Hashing(Python dictionary) -- Time complexity : O(n) -- Space complexity : O(n)
+# Solution 2 -- Hashing(Python dictionary) -- Time complexity : O(n) --
+# Space complexity : O(n)
 class Solution_2:
     def isAnagram(s, t):
         letters = dict()
@@ -36,15 +35,19 @@ class Solution_2:
                 if t[ind] in letters:
                     letters[t[ind]] -= 1
                 elif t[ind] not in letters:
-                        return False
-        
+                    return False
+
         for val in letters.values():
             if val != 0:
                 return False
         return True
 
-# Solution_3 -- Hashing(Python module 'Counter') -- Time complexity : O(n) -- Space complexity : O(1)
+
+# Solution_3 -- Hashing(Python module 'Counter') -- Time complexity : O(n) --
+# Space complexity : O(1)
 from collections import Counter
+
+
 class Solution:
     def isAnagram(s, t):
         if (Counter(s) == Counter(t)):

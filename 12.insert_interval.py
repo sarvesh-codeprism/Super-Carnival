@@ -1,5 +1,7 @@
-# Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
-# You may assume that the intervals were initially sorted according to their start times.
+# Given a set of non-overlapping intervals, insert a new interval into the
+# intervals (merge if necessary).
+# You may assume that the intervals were initially sorted according to their
+# start times.
 
 # Example 1:
 # Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
@@ -22,9 +24,9 @@
 # Input: intervals = [[1,5]], newInterval = [2,7]
 # Output: [[1,7]]
 
-# Solution 1 -- Sorting -- Time complexity : O(nlogn) -- 
-#                          Space complexity : O(logn) - Sorting takes O(logn) space or 
-#                                             O(n) - Storing a copy of intervals and then sorting takes O(n) space
+# Solution 1 -- Sorting -- Time complexity : O(nlogn) --
+# Space complexity : O(logn) - Sorting takes O(logn) space or
+# O(n) - Storing a copy of intervals and then sorting takes O(n) space
 class Solution_1:
     def insert(intervals, newInterval):
         intervals.append(newInterval)

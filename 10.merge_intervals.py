@@ -1,5 +1,5 @@
-# Given an array of intervals where intervals[i] = [starti, endi], 
-# merge all overlapping intervals, and return an array of the 
+# Given an array of intervals where intervals[i] = [starti, endi],
+# merge all overlapping intervals, and return an array of the
 # non-overlapping intervals that cover all the intervals in the input.
 
 # Example 1:
@@ -12,9 +12,9 @@
 # Output: [[1,5]]
 # Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
-# Solution 1 -- Sorting -- Time complexity : O(nlogn) -- 
-#                          Space complexity : O(logn) - Sorting takes O(logn) space or 
-#                                             O(n) - Storing a copy of intervals and then sorting takes O(n) space
+# Solution 1 -- Sorting -- Time complexity : O(nlogn) --
+# Space complexity : O(logn) - Sorting takes O(logn) space or
+# O(n) - Storing a copy of intervals and then sorting takes O(n) space
 class Solution_1:
     def merge(intervals):
         intervals.sort()
@@ -25,4 +25,3 @@ class Solution_1:
             else:
                 merge[-1][1] = max(merge[-1][1], ele[1])
         return merge
-                
